@@ -1,5 +1,7 @@
 require 'optparse'
-
+require "date"
+$date = Date.today
+$selector
 def cmdline
   args = {}
   OptionParser.new do |parser|
@@ -10,15 +12,15 @@ def cmdline
 end
 
 args = cmdline
-SELECTOR = args[:selector]
+$selector = args[:selector]
 
-if(SELECTOR == nil)
-    SELECTOR = "HEAD^"
+if($selector == nil)
+  $selector = "HEAD"
 end
 
 def git_Diff
-  if(SELECTOR != nil)
-    $value = "git archive #{SELECTOR} `git diff --name-only origin/master #{SELECTOR}` -o archive.zip"
+  if($selector != nil)
+    $value = "git archive #{$selector} `git diff --name-only origin/master #{$selector}` -o archive#{$date.year}#{$date.month}#{$date.day}.zip"
   else
     print "\e[31m"
     puts "WARNING! Please pass your branch!"
@@ -27,5 +29,11 @@ def git_Diff
   end
 end
 
+def openArchive
+  $openCommand = "open archive#{$date.year}#{$date.month}#{$date.day}.zip"
+end
+
 git_Diff()
+openArchive()
 system($value)
+system($openCommand)

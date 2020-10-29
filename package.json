@@ -1,0 +1,22 @@
+{
+  "name": "get_diffs",
+  "version": "0.2.1",
+  "description": "You can get Diff that is the difference between origin/master and Lastest commit",
+  "main": "index.js",
+  "scripts": {
+    "diff": "node ./node_modules/get_diffs/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ITakayuki/git_archive.git"
+  },
+  "keywords": [
+    "git"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ITakayuki/git_archive/issues"
+  },
+  "homepage": "https://github.com/ITakayuki/git_archive#readme"
+}
