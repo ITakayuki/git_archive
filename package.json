@@ -2,9 +2,10 @@
   "name": "get_diffs",
   "version": "1.0.0",
   "description": "You can get Diff that is the difference between origin/master and Lastest commit",
-  "main": "index.js",
+  "main": "dist/git_diffs.js",
   "scripts": {
-    "diff": "node ./node_modules/get_diffs/index.js"
+    "diff": "node ./node_modules/get_diffs/index.js",
+    "build": "./node_modules/.bin/babel index.js --out-file dist/git_diffs.js"
   },
   "repository": {
     "type": "git",
@@ -18,5 +19,9 @@
   "bugs": {
     "url": "https://github.com/ITakayuki/git_archive/issues"
   },
-  "homepage": "https://github.com/ITakayuki/git_archive#readme"
+  "homepage": "https://github.com/ITakayuki/git_archive#readme",
+  "dependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0"
+  }
 }
