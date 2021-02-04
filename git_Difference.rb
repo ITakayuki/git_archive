@@ -20,7 +20,7 @@ end
 
 def git_Diff
   if($selector != nil)
-    $value = "git archive #{$selector} `git diff --name-only origin/master #{$selector}` -o archive#{$date.year}#{$date.month}#{$date.day}.zip"
+    $value = "git archive #{$selector} --format=zip -o archive#{$date.year}#{$date.month}#{$date.day}.zip `git diff --name-only origin/master #{$selector}`"
   else
     print "\e[31m"
     puts "WARNING! Please pass your branch!"
