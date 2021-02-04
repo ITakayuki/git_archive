@@ -1,6 +1,6 @@
 {
   "name": "get_diffs",
-  "version": "0.2.1",
+  "version": "1.0.0",
   "description": "You can get Diff that is the difference between origin/master and Lastest commit",
   "main": "index.js",
   "scripts": {
