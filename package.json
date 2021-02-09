@@ -1,6 +1,6 @@
 {
   "name": "get_diffs",
-  "version": "1.0.1",
+  "version": "1.0.7",
   "description": "You can get Diff that is the difference between origin/master and Lastest commit",
   "main": "dist/git_diffs.js",
   "scripts": {
@@ -8,7 +8,7 @@
     "build": "./node_modules/.bin/babel index.js --out-file dist/git_diffs.js"
   },
   "bin": {
-    "git_diff": "./dist/git_diffs.js"
+    "get_diffs": "./dist/git_diffs.js"
   },
   "repository": {
     "type": "git",
